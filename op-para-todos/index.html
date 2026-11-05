@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Comercial, posts, fotos y piezas retail de la campaña OP para todos, Q3 2026.">
+<meta property="og:title" content="OP para todos · Q3 26">
+<meta property="og:description" content="Videos, redes, temporadas y retail de la campaña OP para todos.">
+<meta property="og:image" content="img/p1.jpg">
+<title>OP para todos · Q3 26</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Instrument+Serif:ital@1&display=swap">
+<style>
+/* Layout: a campaign delivery room. Caramel-wood hero from the key visual, then numbered deck sections (the deck's own order), video review with time-stamped notes, image grids with a review lightbox. */
+:root{
+  --bg:#f7f2ec; --surface:#ffffff; --ink:#1e2433; --muted:#6c675f; --line:#e4dbd0;
+  --caramel:#c98a57; --caramel-ink:#8a5528; --navy:#24406f; --on-accent:#ffffff;
+  --hero-ink:#ffffff; --shade:rgba(20,16,12,.55);
+  --display:"Jost","Futura","Century Gothic","Avenir Next",system-ui,sans-serif;
+  --body:"Jost","Avenir Next","Segoe UI",system-ui,sans-serif;
+  --script:"Instrument Serif","Georgia",serif;
+  --r:6px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#15130f; --surface:#1f1c17; --ink:#f1ebe3; --muted:#a59d92; --line:#332e27;
+  --caramel:#d79a68; --caramel-ink:#e2ad80; --navy:#8fa9d8; --on-accent:#1a140e;
+  --shade:rgba(0,0,0,.6); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#15130f; --surface:#1f1c17; --ink:#f1ebe3; --muted:#a59d92; --line:#332e27;
+  --caramel:#d79a68; --caramel-ink:#e2ad80; --navy:#8fa9d8; --on-accent:#1a140e;
+  --shade:rgba(0,0,0,.6); color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;font-weight:400}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--caramel);outline-offset:2px}
+h1,h2,h3{font-family:var(--display);font-weight:300;text-wrap:balance;margin:0}
+.eyebrow{font-size:.74rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:500}
+
+/* top bar */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:10px}
+.mark{font-family:var(--display);font-size:1.35rem;font-weight:400;letter-spacing:-.01em;display:flex;align-items:baseline;gap:8px}
+.mark small{font-size:.8rem;color:var(--muted);font-weight:400;letter-spacing:.04em}
+.btn{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);background:transparent;border-radius:999px;padding:8px 16px;font-size:.88rem;font-weight:500;text-decoration:none;white-space:nowrap}
+.btn.solid{background:var(--navy);border-color:var(--navy);color:var(--on-accent)}
+.btn svg{width:16px;height:16px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:#2a1d12}
+.hero img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;max-height:78vh}
+.hero .cap{position:absolute;inset:auto 0 0 0;background:linear-gradient(transparent,var(--shade));color:var(--hero-ink)}
+.hero .cap .wrap{padding-block:48px 24px;display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.hero .eyebrow{color:rgba(255,255,255,.82)}
+.hero p{margin:4px 0 0;max-width:34ch;font-size:1.02rem;color:rgba(255,255,255,.92)}
+
+.intro{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;padding-block:56px 32px;align-items:start}
+.intro h1{font-size:clamp(2.6rem,6vw,4.6rem);line-height:1;letter-spacing:-.02em}
+.intro h1 em{font-family:var(--script);font-style:italic;font-weight:400;color:var(--caramel-ink)}
+.intro .lede{font-size:1.08rem;max-width:58ch;margin:0}
+.intro .lede+.lede{margin-top:14px;color:var(--muted)}
+.meta{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:22px;font-size:.88rem;color:var(--muted)}
+.meta b{color:var(--ink);font-weight:500}
+.how{margin-top:22px;padding:14px 16px;border-left:3px solid var(--caramel);background:var(--surface);font-size:.92rem;border-radius:0 var(--r) var(--r) 0}
+
+/* index */
+.index{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-bottom:24px}
+.index a{display:flex;flex-direction:column;gap:2px;padding:16px 14px;text-decoration:none;border-right:1px solid var(--line)}
+.index a:last-child{border-right:0}
+.index a:hover{background:var(--surface)}
+.index .n{font-size:.78rem;color:var(--caramel-ink);font-weight:600;font-variant-numeric:tabular-nums}
+.index .t{font-family:var(--display);font-size:1.15rem}
+.index .c{font-size:.8rem;color:var(--muted)}
+
+section.block{padding-block:56px 16px;scroll-margin-top:70px}
+.shead{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:28px;border-bottom:1px solid var(--line);padding-bottom:14px}
+.shead .n{font-family:var(--display);font-size:1rem;color:var(--caramel-ink);font-weight:500;font-variant-numeric:tabular-nums}
+.shead h2{font-size:clamp(1.8rem,3.4vw,2.6rem);letter-spacing:-.01em}
+.shead .c{margin-left:auto;font-size:.86rem;color:var(--muted)}
+h3.sub{font-size:1.25rem;margin:36px 0 14px;font-weight:400}
+
+/* videos */
+.vids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.vid{display:flex;flex-direction:column;gap:12px;min-width:0}
+.vid video{width:100%;aspect-ratio:9/16;object-fit:cover;background:#000;border-radius:var(--r);display:block;max-width:100%}
+.vid h3{font-size:1.3rem;font-weight:400}
+.copy{font-size:.92rem;color:var(--muted);white-space:pre-line;margin:0}
+.copy b{color:var(--ink);font-weight:500}
+.notebox{border:1px solid var(--line);border-radius:var(--r);background:var(--surface);padding:12px}
+.notebox form{display:flex;gap:8px;align-items:stretch}
+.tchip{flex:none;align-self:center;font-size:.78rem;font-weight:600;font-variant-numeric:tabular-nums;background:var(--caramel);color:var(--on-accent);border-radius:999px;padding:3px 9px}
+.notebox input{flex:1;min-width:0;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:var(--r);padding:8px 10px;font:inherit;font-size:.9rem}
+.notebox button[type=submit]{border:0;background:var(--ink);color:var(--bg);border-radius:var(--r);padding:0 12px;font-size:.85rem;font-weight:500}
+.notes{list-style:none;margin:10px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;max-height:260px;overflow:auto}
+.notes li{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:8px;align-items:start;font-size:.88rem}
+.notes .at{border:0;background:transparent;color:var(--caramel-ink);font-weight:600;font-variant-numeric:tabular-nums;padding:0;text-decoration:underline;text-underline-offset:3px}
+.notes .who{display:block;font-size:.74rem;color:var(--muted)}
+.notes .x{border:0;background:transparent;color:var(--muted);font-size:1rem;line-height:1;padding:0 2px}
+.empty{font-size:.84rem;color:var(--muted);margin:10px 0 0}
+.status{font-size:.8rem;color:var(--muted);margin:8px 0 0}
+
+/* galleries */
+.grid{display:grid;gap:14px}
+.g-wide{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g-tall{grid-template-columns:repeat(4,minmax(0,1fr))}
+.tile{position:relative;border:0;padding:0;background:var(--surface);border-radius:var(--r);overflow:hidden;display:block;width:100%;text-align:left}
+.tile img{display:block;width:100%;height:auto;transition:transform .5s ease}
+.tile:hover img{transform:scale(1.02)}
+.tile .lbl{position:absolute;left:10px;bottom:10px;background:var(--surface);color:var(--ink);font-size:.76rem;font-weight:500;border-radius:999px;padding:3px 10px;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.tile .cnt{position:absolute;right:10px;top:10px;background:var(--caramel);color:var(--on-accent);font-size:.72rem;font-weight:600;border-radius:999px;padding:2px 8px}
+.tile .cnt:empty{display:none}
+
+/* identity */
+.ident{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:start}
+.facts{display:grid;gap:18px}
+.fact{border-top:1px solid var(--line);padding-top:12px}
+.fact .k{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.fact .v{font-size:1.05rem}
+.fact .v small{display:block;color:var(--muted);font-size:.86rem}
+.copyline{display:inline-flex;gap:6px;align-items:center}
+.copyline button{border:1px solid var(--line);background:transparent;border-radius:999px;font-size:.72rem;padding:1px 8px;color:var(--muted)}
+
+footer{margin-top:64px;border-top:1px solid var(--line)}
+footer .wrap{padding-block:24px;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between;font-size:.78rem;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:20;background:rgba(12,10,8,.92);display:grid;grid-template-columns:minmax(0,1fr) 340px;padding:env(safe-area-inset-top,0px) env(safe-area-inset-right,0px) env(safe-area-inset-bottom,0px) env(safe-area-inset-left,0px)}
+.lb .stage{display:flex;align-items:center;justify-content:center;padding:24px;min-width:0;min-height:0;position:relative}
+.lb .stage img{max-width:100%;max-height:calc(100vh - 48px);object-fit:contain;border-radius:4px}
+.lb aside{background:var(--bg);color:var(--ink);padding:20px 16px;display:flex;flex-direction:column;gap:12px;overflow:auto}
+.lb aside h3{font-size:1.3rem;font-weight:400}
+.lb .notes{max-height:none}
+.lb .close{position:absolute;top:12px;left:12px;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:999px;width:38px;height:38px;font-size:1.3rem}
+.lb .nav{position:absolute;top:50%;transform:translateY(-50%);border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:999px;width:42px;height:42px;font-size:1.2rem}
+.lb .prev{left:12px}.lb .next{right:12px}
+
+@media (max-width:900px){
+  .intro,.ident{grid-template-columns:minmax(0,1fr);gap:28px}
+  .vids{grid-template-columns:minmax(0,1fr);max-width:440px}
+  .g-tall{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .index{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .index a{border-bottom:1px solid var(--line)}
+  .lb{grid-template-columns:minmax(0,1fr);grid-template-rows:minmax(0,1fr) auto}
+  .lb .stage img{max-height:55vh}
+  .lb aside{max-height:42vh}
+}
+@media (max-width:560px){
+  .g-wide{grid-template-columns:minmax(0,1fr)}
+  .mark small{display:none}
+  .shead .c{margin-left:0;width:100%}
+}
+@media (prefers-reduced-motion:reduce){.tile img{transition:none}}
+
+:root{color-scheme:light}html{-webkit-text-size-adjust:100%}body{margin:0}img{max-width:100%}[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header class="bar">
+  <div class="wrap">
+    <div class="mark">Ocean Pacific <small>Q3 · 2026</small></div>
+    <a class="btn solid" href="https://www.dropbox.com/scl/fo/y449l2xhjd9x83rusaz6u/ADpvJ95TWqjIYXrG6eciDcg?rlkey=xreura2ocap4ghlco784nlezj&amp;dl=0" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16"/></svg>Descargar todo</a>
+  </div>
+</header>
+
+<div class="hero">
+  <img src="img/p1.jpg" alt="Zapatos OP de toda la familia sobre un estante de madera">
+  <div class="cap"><div class="wrap">
+    <div><div class="eyebrow">Campaña · Octubre 2026</div><p>Un OP para cada integrante de la familia.</p></div>
+  </div></div>
+</div>
+
+<main class="wrap">
+  <div class="intro">
+    <div>
+      <div class="eyebrow">Ocean Pacific Footwear</div>
+      <h1>Un OP <em>para todos</em></h1>
+      <div class="meta"><span><b>3</b> videos</span><span><b>7</b> posts</span><span><b>30+</b> fotos de campaña</span><span><b>5</b> piezas retail</span></div>
+    </div>
+    <div>
+      <p class="lede">OP acompaña las distintas personalidades, gustos y momentos que conviven en una familia. Cada integrante tiene su propia forma de expresarse, de moverse y de vivir, y existe un OP que conecta con cada uno.</p>
+      <p class="lede">La campaña celebra esas diferencias: no hace falta vestir igual para compartir el mismo estilo.</p>
+    </div>
+  </div>
+
+  <nav class="index" aria-label="Secciones">
+    <a href="#videos"><span class="n">01</span><span class="t">Videos</span><span class="c">3 piezas</span></a>
+    <a href="#redes"><span class="n">02</span><span class="t">Redes</span><span class="c">Posts y fotos</span></a>
+    <a href="#temporadas"><span class="n">03</span><span class="t">Temporadas</span><span class="c">Mamá y papá</span></a>
+    <a href="#retail"><span class="n">04</span><span class="t">Retail</span><span class="c">Vitrinas y POP</span></a>
+    <a href="#identidad"><span class="n">05</span><span class="t">Identidad</span><span class="c">Logo y contactos</span></a>
+  </nav>
+
+  <section class="block" id="videos">
+    <div class="shead"><span class="n">01</span><h2>Videos</h2><span class="c">Formato vertical 9:16 · #UnOpParaTodos</span></div>
+    <div class="vids" id="vids"></div>
+  </section>
+
+  <section class="block" id="redes">
+    <div class="shead"><span class="n">02</span><h2>Redes</h2><span class="c">Posts 4:5 y fotografía de campaña</span></div>
+    <h3 class="sub">Posts y carruseles</h3>
+    <div class="grid g-tall" id="g-posts"></div>
+    <h3 class="sub">Key visuals</h3>
+    <div class="grid g-wide" id="g-kv"></div>
+    <h3 class="sub">Fotos de campaña</h3>
+    <div class="grid g-wide" id="g-fotos"></div>
+  </section>
+
+  <section class="block" id="temporadas">
+    <div class="shead"><span class="n">03</span><h2>Temporadas</h2><span class="c">Día de la Madre y Día del Padre</span></div>
+    <div class="grid g-wide" id="g-temp"></div>
+  </section>
+
+  <section class="block" id="retail">
+    <div class="shead"><span class="n">04</span><h2>Retail</h2><span class="c">Vitrinas, dangler y cubos de exhibición</span></div>
+    <div class="grid g-wide" id="g-retail"></div>
+  </section>
+
+  <section class="block" id="identidad">
+    <div class="shead"><span class="n">05</span><h2>Identidad y contactos</h2></div>
+    <div class="ident">
+      <div class="grid" id="g-ident"></div>
+      <div class="facts">
+        <div class="fact"><div class="k">Tipografía</div><div class="v">Futura Book</div></div>
+        <div class="fact"><div class="k">Instagram</div><div class="v">@Op_latam <small>Envíanos collab</small></div></div>
+        <div class="fact"><div class="k">Gerencia de Mercadeo</div><div class="v">Jenny Da Silva <small class="copyline"><span>jennyds@piazza.com.pa</span><button type="button" data-copy="jennyds@piazza.com.pa">Copiar</button></small></div></div>
+        <div class="fact"><div class="k">Ejecutiva Mercadeo Digital</div><div class="v">Michelle Quiñones <small class="copyline"><span>michelle.q@piazza.com.pa</span><button type="button" data-copy="michelle.q@piazza.com.pa">Copiar</button></small></div></div>
+        <div class="fact"><div class="k">VP de relaciones B2B</div><div class="v">Clara Sofía Flórez <small class="copyline"><span>clarasofia@piazza.com.pa</span><button type="button" data-copy="clarasofia@piazza.com.pa">Copiar</button></small></div></div>
+        <div class="fact"><div class="k">Archivos en alta</div><div class="v"><a href="https://www.dropbox.com/scl/fo/y449l2xhjd9x83rusaz6u/ADpvJ95TWqjIYXrG6eciDcg?rlkey=xreura2ocap4ghlco784nlezj&amp;dl=0" target="_blank" rel="noopener">Carpeta de la campaña en Dropbox</a><small>Fotos, videos originales y archivos editables de vitrina</small></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span>Ocean Pacific Footwear · Octubre 2026</span><span>Consultas: socialmedia@piazza.com.pa</span></div></footer>
+
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-labelledby="lb-title">
+  <div class="stage">
+    <button class="close" id="lb-close" type="button" aria-label="Cerrar">×</button>
+    <button class="nav prev" id="lb-prev" type="button" aria-label="Anterior">‹</button>
+    <img id="lb-img" alt="">
+    <button class="nav next" id="lb-next" type="button" aria-label="Siguiente">›</button>
+  </div>
+  <aside>
+    <div class="eyebrow" id="lb-sec"></div>
+    <h3 id="lb-title"></h3>
+  </aside>
+</div>
+
+<script>
+const VIDEOS=[
+  {id:"v-principal",title:"Video principal",src:"vid/principal.mp4",poster:"img/poster_principal.jpg",
+   copy:"Distintos estilos.\nDiferentes prioridades…\nNinguno listo al mismo tiempo ⏱️\n\nPara cada uno hay un OP.\nUn OP para todos.\n<b>#UnOpParaTodos</b>"},
+  {id:"v-secundario",title:"Video secundario",src:"vid/secundario.mp4",poster:"img/poster_secundario.jpg",
+   copy:"Cada uno puede estar en su mundo, pero para toda forma de ser, <b>hay un OP</b>.\n<b>#UnOpParaTodos</b>"},
+  {id:"v-retro",title:"Video OP Retro (Pelin)",src:"vid/retro.mp4",poster:"img/poster_retro.jpg",
+   copy:"Distintos estilos.\nDistintas prioridades.\nLa misma prisa por salir…\nPero ninguno listo al mismo tiempo ⏱️\n\nPara cada uno hay un OP.\n<b>#UnOpParaTodos</b>"}
+];
+const GALLERIES={
+  "g-posts":{sec:"Redes · Post 4:5",items:[[36,"Post 1"],[37,"Carrusel 1"],[38,"Carrusel 2 · lámina 1"],[39,"Carrusel 2 · lámina 2"],[40,"Carrusel 3 · lámina 1"],[41,"Carrusel 3 · lámina 2"],[42,"Post familia"]]},
+  "g-kv":{sec:"Redes · Key visual",items:[[28,"Banner familia"],[35,"Banner logo centrado"],[29,"Portada Un OP para todos"],[30,"Hay un OP para todos"]]},
+  "g-fotos":{sec:"Redes · Fotografía",items:[[9,"Lectura"],[11,"Gamer"],[12,"Jardín"],[13,"Primeros pasos"],[14,"Estudio"],[15,"Papá e hijo"],[16,"Cocina"],[17,"Running urbano"],[18,"Casual papá"],[19,"Kids"]]},
+  "g-temp":{sec:"Temporadas",items:[[21,"Top como mamá"],[22,"Lo más top para papá"]]},
+  "g-retail":{sec:"Retail",items:[[24,"Vitrina grande · campaña"],[25,"Vitrina pequeña · genérica"],[31,"Vitrina 1,50 × 2,00 m"],[26,"Dangler"],[27,"Cubos para exhibición"]]},
+  "g-ident":{sec:"Identidad",items:[[32,"Tipografía y logo de campaña"]]}
+};
+const PIECES=[]; // flat list for lightbox nav
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+
+// ---- videos ----
+const vw=document.getElementById("vids");
+VIDEOS.forEach(v=>{
+  const c=document.createElement("article");c.className="vid";
+  c.innerHTML=`<video controls playsinline preload="metadata" poster="${v.poster}" src="${v.src}"></video><h3>${v.title}</h3><p class="copy">${v.copy}</p>`;
+  vw.appendChild(c);
+});
+
+// ---- galleries ----
+Object.entries(GALLERIES).forEach(([gid,g])=>{
+  const host=document.getElementById(gid);
+  g.items.forEach(([p,label])=>{
+    const id="p"+p, idx=PIECES.length;
+    PIECES.push({id,src:`img/p${p}.jpg`,label,sec:g.sec});
+    const b=document.createElement("button");b.type="button";b.className="tile";b.dataset.piece=id;
+    b.innerHTML=`<img loading="lazy" src="img/p${p}.jpg" alt="${esc(label)}"><span class="lbl">${esc(label)}</span>`;
+    b.addEventListener("click",()=>openLb(idx));host.appendChild(b);
+  });
+});
+
+// ---- lightbox ----
+const lb=document.getElementById("lb");let cur=0,lastFocus=null;
+function showLb(i){
+  cur=(i+PIECES.length)%PIECES.length;const p=PIECES[cur];
+  document.getElementById("lb-img").src=p.src;document.getElementById("lb-img").alt=p.label;
+  document.getElementById("lb-title").textContent=p.label;document.getElementById("lb-sec").textContent=p.sec;
+}
+function openLb(i){lastFocus=document.activeElement;lb.hidden=false;document.body.style.overflow="hidden";showLb(i);document.getElementById("lb-close").focus()}
+function closeLb(){lb.hidden=true;document.body.style.overflow="";lastFocus&&lastFocus.focus()}
+document.getElementById("lb-close").onclick=closeLb;
+document.getElementById("lb-prev").onclick=()=>showLb(cur-1);
+document.getElementById("lb-next").onclick=()=>showLb(cur+1);
+document.addEventListener("keydown",e=>{if(lb.hidden)return;if(e.key==="Escape")closeLb();if(e.target.tagName==="INPUT")return;if(e.key==="ArrowLeft")showLb(cur-1);if(e.key==="ArrowRight")showLb(cur+1)});
+lb.addEventListener("click",e=>{if(e.target.classList.contains("stage"))closeLb()});
+
+// ---- copy buttons ----
+document.querySelectorAll("[data-copy]").forEach(b=>b.addEventListener("click",()=>{
+  const t=b.dataset.copy;navigator.clipboard?.writeText(t).then(()=>{b.textContent="Copiado";setTimeout(()=>b.textContent="Copiar",1500)}).catch(()=>{const r=document.createRange();r.selectNodeContents(b.previousElementSibling);const s=getSelection();s.removeAllRanges();s.addRange(r)});
+}));
+
+</script>
+</body>
+</html>
